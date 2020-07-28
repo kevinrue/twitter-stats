@@ -21,7 +21,7 @@ jobs:
       - name: Install renv
         run: |
           options(repos = c(CRAN = "https://cran.r-project.org"))
-          install.packages(c('renv', 'remotes'))
+          install.packages(c('renv', 'remotes', 'BiocManager'))
         shell: Rscript {0}
 
       - name: Cache renv
