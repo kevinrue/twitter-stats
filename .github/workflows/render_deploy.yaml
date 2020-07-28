@@ -69,6 +69,11 @@ jobs:
             access_secret = Sys.getenv("ACCESS_SECRET"))
         shell: Rscript {0}
 
+      - name: Set up phantomjs
+        run: |
+          webshot::install_phantomjs()
+        shell: Rscript {0}
+
       - name: Render site
         run: |
           rmarkdown::render_site(input = "analysis")
