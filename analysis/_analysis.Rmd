@@ -1,4 +1,6 @@
 ```{r setup}
+knitr::opts_chunk$set(crop = NULL)
+
 # Convert days to dates
 start_date <- as_date(params$start_day)
 end_date <- as_date(params$end_day)
