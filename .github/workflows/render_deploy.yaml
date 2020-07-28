@@ -10,7 +10,7 @@ jobs:
   render_deploy:
 
     runs-on: ubuntu-latest
-    container: bioconductor/bioconductor_docker:bioc2020
+    container: bioconductor/bioconductor_docker:RELEASE_3_11
 
     env:
       R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
@@ -69,21 +69,21 @@ jobs:
             access_secret = Sys.getenv("ACCESS_SECRET"))
         shell: Rscript {0}
 
-      - name: Render site
-        run: |
-          rmarkdown::render_site(input = "analysis")
-        shell: Rscript {0}
+      # - name: Render site
+      #   run: |
+      #     rmarkdown::render_site(input = "analysis")
+      #   shell: Rscript {0}
 
       # deploy needs rsync? Seems so.
-      - name: Install deploy dependencies
-        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
-        run: |
-          apt-get update && apt-get -y install rsync
+      # - name: Install deploy dependencies
+      #   if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+      #   run: |
+      #     apt-get update && apt-get -y install rsync
 
-      - name: Deploy 🚀
-        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
-        uses: JamesIves/github-pages-deploy-action@releases/v3
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: _docs # The folder the action should deploy.
+      # - name: Deploy 🚀
+      #   if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+      #   uses: JamesIves/github-pages-deploy-action@releases/v3
+      #   with:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #     BRANCH: gh-pages # The branch the action should deploy to.
+      #     FOLDER: _docs # The folder the action should deploy.
