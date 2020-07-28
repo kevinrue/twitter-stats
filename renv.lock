@@ -8,6 +8,9 @@
       }
     ]
   },
+  "Bioconductor": {
+    "Version": "3.11"
+  },
   "Packages": {
     "BH": {
       "Package": "BH",
@@ -15,6 +18,19 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "8f9ce74c6417d61f0782cbae5fd2b7b0"
+    },
+    "BiocManager": {
+      "Package": "BiocManager",
+      "Version": "1.30.10",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "db75371846625725e221470b310da1d5"
+    },
+    "BiocStyle": {
+      "Package": "BiocStyle",
+      "Version": "2.17.0",
+      "Source": "Bioconductor",
+      "Hash": "871f980a96061e118e31c1d5398f52b5"
     },
     "MASS": {
       "Package": "MASS",
@@ -106,6 +122,13 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "543776ae6848fde2f48ff3816d0628bc"
+    },
+    "bookdown": {
+      "Package": "bookdown",
+      "Version": "0.20",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "31ed5641f4a91cf113de490e0bb006b8"
     },
     "callr": {
       "Package": "callr",
