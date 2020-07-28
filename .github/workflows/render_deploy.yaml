@@ -53,6 +53,21 @@ jobs:
           sysreqs=$(Rscript -e "cat(sysreqs::sysreq_commands('DESCRIPTION'))")
           sudo -s eval "$sysreqs"
 
+      - name: Set up rtweet
+        with:
+          APP: ${{ secrets.RTWEET_APP }}
+          CONSUMER_KEY: ${{ secrets.RTWEET_CONSUMER_KEY }}
+          CONSUMER_SECRET: ${{ secrets.RTWEET_CONSUMER_SECRET }}
+          ACCESS_TOKEN: ${{ secrets.RTWEET_ACCESS_TOKEN }}
+          ACCESS_SECRET: ${{ secrets.RTWEET_ACCESS_SECRET }}
+        run: |
+          create_token(
+            app = Sys.getenv("APP"),
+            consumer_key = Sys.getenv("CONSUMER_KEY"),
+            consumer_secret = Sys.getenv("CONSUMER_SECRET"),
+            access_token = Sys.getenv("ACCESS_TOKEN"),
+            access_secret = Sys.getenv("ACCESS_SECRET"))
+
       - name: Render site
         run: |
           rmarkdown::render_site(input = "analysis")
