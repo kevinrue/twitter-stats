@@ -61,12 +61,7 @@ jobs:
           ACCESS_TOKEN: ${{ secrets.RTWEET_ACCESS_TOKEN }}
           ACCESS_SECRET: ${{ secrets.RTWEET_ACCESS_SECRET }}
         run: |
-          create_token(
-            app = Sys.getenv("APP"),
-            consumer_key = Sys.getenv("CONSUMER_KEY"),
-            consumer_secret = Sys.getenv("CONSUMER_SECRET"),
-            access_token = Sys.getenv("ACCESS_TOKEN"),
-            access_secret = Sys.getenv("ACCESS_SECRET"))
+          create_token(app = Sys.getenv("RTWEET_APP_APP"), consumer_key = Sys.getenv("RTWEET_APP_CONSUMER_KEY"), consumer_secret = Sys.getenv("RTWEET_APP_CONSUMER_SECRET"), access_token = Sys.getenv("RTWEET_APP_ACCESS_TOKEN"), access_secret = Sys.getenv("RTWEET_APP_ACCESS_SECRET"))
 
       - name: Render site
         run: |
