@@ -28,9 +28,15 @@
     },
     "BiocStyle": {
       "Package": "BiocStyle",
-      "Version": "2.17.0",
+      "Version": "2.16.0",
       "Source": "Bioconductor",
-      "Hash": "871f980a96061e118e31c1d5398f52b5"
+      "Hash": "7dba8ba80463cb90215ac9ddd7e7935f"
+    },
+    "BiocVersion": {
+      "Package": "BiocVersion",
+      "Version": "3.11.1",
+      "Source": "Bioconductor",
+      "Hash": "2331d61d077a7a0a5afe8c907ea9106b"
     },
     "MASS": {
       "Package": "MASS",
@@ -725,10 +731,10 @@
     },
     "tinytex": {
       "Package": "tinytex",
-      "Version": "0.24",
+      "Version": "0.25",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "8f24b65b86f4d6d7b1e2d8a4ce2c02fb"
+      "Hash": "a4b9662282097d1033c60420dcb83350"
     },
     "tm": {
       "Package": "tm",
@@ -823,10 +829,10 @@
     },
     "xfun": {
       "Package": "xfun",
-      "Version": "0.15",
+      "Version": "0.16",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "ddeca7650052ff9131ac7c41a9a77b3b"
+      "Hash": "b4106139b90981a8bfea9c10bab0baf1"
     },
     "xml2": {
       "Package": "xml2",
