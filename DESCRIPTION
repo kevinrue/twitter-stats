@@ -13,4 +13,5 @@ Suggests:
     BiocStyle,
     htmltools,
     knitr,
-    rmarkdown
+    rmarkdown,
+    rtweet
