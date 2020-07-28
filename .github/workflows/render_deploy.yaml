@@ -29,14 +29,14 @@ jobs:
         with:
           path: ~/.local/share/renv
           key: ${{ runner.os }}-renv-1-${{ hashFiles('renv.lock') }}
-          restore-keys: ${{ runner.os }}-r-1-
+          restore-keys: ${{ runner.os }}-renv-1-
 
       - name: Cache rds files
         uses: actions/cache@v1
         with:
           path: ./data
           key: ${{ runner.os }}-rds-1-${{ hashFiles('data/*Rds') }}
-          restore-keys: ${{ runner.os }}-r-1-
+          restore-keys: ${{ runner.os }}-rds-1-
 
       - name: Restore renv
         run: |
