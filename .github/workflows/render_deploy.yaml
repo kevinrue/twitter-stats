@@ -74,7 +74,7 @@ jobs:
           rmarkdown::render_site(input = "analysis")
         shell: Rscript {0}
 
-      deploy needs rsync? Seems so.
+      # deploy needs rsync? Seems so.
       - name: Install deploy dependencies
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         run: |
