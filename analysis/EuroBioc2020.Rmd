@@ -15,7 +15,7 @@ params:
     # Analysis parameters
     kcore: 2
     topics_k: 6
-    bigram_filter: 2
+    bigram_filter: 3
     # Dataset fixed, set true to stop adding new tweets
     fixed: FALSE
     # Random seed
