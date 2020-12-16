@@ -12,7 +12,7 @@ jobs:
   render_deploy:
 
     runs-on: ubuntu-latest
-    container: bioconductor/bioconductor_docker:RELEASE_3_12
+    container: bioconductor/bioconductor_docker:devel
 
     env:
       R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
